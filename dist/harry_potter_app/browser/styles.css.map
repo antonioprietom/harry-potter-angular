@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.scss"],
+  "sourcesContent": ["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml, body {\n  height: 100%;\n  width: 100%;\n  background-color: #000;\n}\n"],
+  "mappings": ";AAAA;AACE,UAAA;AACA,WAAA;AACA,cAAA;;AAGF;AAAA;AACE,UAAA;AACA,SAAA;AACA,oBAAA;;",
+  "names": []
+}

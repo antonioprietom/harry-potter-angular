@@ -1,0 +1,6 @@
+$breakpoint-tablet: 850px;
+$breakpoint-mobile: 450px;
+
+//HE defnido los puntos de rotura para que sean globales
+// y no tenerlos que escribir como estaba haciendo en cada archivo scss
+// así si en algún momento hay que cambiarlos no hace falta ir página por página

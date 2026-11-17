@@ -1,0 +1,14 @@
+<div class="peliculas__container">
+    <div class="peliculas__grid">
+        @for (movie of movies; track movie.id) {
+            <div class="movie__card" (click)="open(movie)">
+                <div class="movie__poster-container">
+                    <img [src]="movie.poster" [alt]="movie.title" class="movie__card--poster"/>
+                </div>
+                <div class="movie__info">
+                    <div class="movie__card--title">{{ movie.title }}</div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

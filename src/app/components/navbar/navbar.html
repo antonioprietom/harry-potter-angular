@@ -1,0 +1,21 @@
+<div class="navbar__container">
+  <div class="navbar__left">
+    <img src="assets/icons/harry_potter_icon.png" alt="icono" class="navbar__left--icon" (click)="navigateTo('/main')"/>
+    <span class="navbar__left--name">Antonio Prieto Mejias</span>
+  </div>
+<!--  <nav class="navbar__right">-->
+<!--      <a class="navbar__right&#45;&#45;link" (click)="navigateTo('/libros')">Libros</a>-->
+<!--      <a class="navbar__right&#45;&#45;link" (click)="navigateTo('/personajes')">Personajes</a>-->
+<!--      <a class="navbar__right&#45;&#45;link" (click)="navigateTo('/peliculas')">Películas</a>-->
+<!--      <a class="navbar__right&#45;&#45;link" (click)="navigateTo('/pociones')">Pociones</a>-->
+<!--      <a class="navbar__right&#45;&#45;link" (click)="navigateTo('/hechizos')">Hechizos</a>-->
+<!--  </nav>-->
+<!--</div>-->
+    <nav class="navbar__right">
+        <a class="navbar__right--link" routerLink="/libros" routerLinkActive="is-active">Libros</a>
+        <a class="navbar__right--link" routerLink="/personajes" routerLinkActive="is-active">Personajes</a>
+        <a class="navbar__right--link" routerLink="/peliculas" routerLinkActive="is-active">Películas</a>
+        <a class="navbar__right--link" routerLink="/pociones" routerLinkActive="is-active">Pociones</a>
+        <a class="navbar__right--link" routerLink="/hechizos" routerLinkActive="is-active">Hechizos</a>
+    </nav>
+</div>

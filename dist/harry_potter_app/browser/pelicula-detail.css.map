@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/peliculas/modal/pelicula-detail.scss"],
+  "sourcesContent": [".movie__detail {\n  display: flex;\n  flex-direction: row;\n  gap: 20px;\n  padding: 8px;\n  align-items: flex-start;\n\n  &--left {\n    flex-shrink: 0;\n    width: 200px;\n  }\n\n  &--poster {\n    width: 100%;\n    height: auto;\n    border-radius: 4px;\n    display: block;\n  }\n\n  &--right {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n    min-width: 0;\n  }\n\n  &--title {\n    color: #d4af37;\n    font-family: 'Harry Potter', serif;\n    font-weight: 400;\n    font-size: 24px;\n  }\n\n  &--summary {\n    color: #fff;\n    line-height: 1.5;\n    text-align: justify;\n  }\n\n  &--trailer {\n    color: #6aaaff;\n    text-decoration: underline;\n    font-size: 14px;\n  }\n}\n\n@media (max-width: 600px) {\n  .movie__detail {\n    flex-direction: column;\n    align-items: center;\n\n    &--left {\n      width: 60%;\n    }\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,kBAAA;AACA,OAAA;AACA,WAAA;AACA,eAAA;;AAEA,CAAA;AACE,eAAA;AACA,SAAA;;AAGF,CAAA;AACE,SAAA;AACA,UAAA;AACA,iBAAA;AACA,WAAA;;AAGF,CAAA;AACE,QAAA;AACA,WAAA;AACA,kBAAA;AACA,OAAA;AACA,aAAA;;AAGF,CAAA;AACE,SAAA;AACA,eAAA,cAAA,EAAA;AACA,eAAA;AACA,aAAA;;AAGF,CAAA;AACE,SAAA;AACA,eAAA;AACA,cAAA;;AAGF,CAAA;AACE,SAAA;AACA,mBAAA;AACA,aAAA;;AAIJ,QAAA,WAAA;AACE,GAhDF;AAiDI,oBAAA;AACA,iBAAA;;AAEA,GA7CF;AA8CI,WAAA;;;",
+  "names": []
+}

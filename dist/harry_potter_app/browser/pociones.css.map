@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/pociones/pociones.scss"],
+  "sourcesContent": [".construction__container {\n  min-height: 100vh;\n  width: 100%;\n  background-color: #000;\n  color: #fff;\n  padding: 110px 24px 40px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.construction__box {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 16px;\n}\n\n.construction__img {\n  max-width: 320px;\n  width: 100%;\n  height: auto;\n}\n\n.construction__text {\n  font-family: 'Harry Potter', serif;\n  color: #d4af37;\n  text-shadow: 0 0 20px #b8860b;\n  font-size: clamp(28px, 5vw, 48px);\n  text-align: center;\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;AACA,SAAA;AACA,oBAAA;AACA,SAAA;AACA,WAAA,MAAA,KAAA;AACA,WAAA;AACA,mBAAA;AACA,eAAA;;AAGF,CAAA;AACE,WAAA;AACA,kBAAA;AACA,eAAA;AACA,OAAA;;AAGF,CAAA;AACE,aAAA;AACA,SAAA;AACA,UAAA;;AAGF,CAAA;AACE,eAAA,cAAA,EAAA;AACA,SAAA;AACA,eAAA,EAAA,EAAA,KAAA;AACA,aAAA,MAAA,IAAA,EAAA,GAAA,EAAA;AACA,cAAA;;",
+  "names": []
+}

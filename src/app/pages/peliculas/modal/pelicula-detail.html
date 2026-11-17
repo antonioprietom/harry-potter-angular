@@ -1,0 +1,16 @@
+@if (movie) {
+  <div class="movie__detail">
+    <div class="movie__detail--left">
+      <img [src]="movie.poster" [alt]="movie.title" class="movie__detail--poster" />
+    </div>
+    <div class="movie__detail--right">
+      <h3 class="movie__detail--title">{{ movie.title }}</h3>
+      <p class="movie__detail--summary">{{ movie.summary }}</p>
+        <div class="movie__detail--info">
+            <p>Director: {{ movie.directors }}</p>
+            <p>Productores: {{ movie.producers }}</p>
+        </div>
+      <a [href]="movie.trailer" target="_blank" rel="noopener" class="movie__detail--trailer">Ver tráiler</a>
+    </div>
+  </div>
+}

@@ -1,0 +1,43 @@
+<div class="libros__container">
+  @if (isLoading) {
+    <div class="libros__state">Cargando libros...</div>
+  }
+
+  @if (error) {
+    <div class="libros__state">Ups, ha ocurrido un error</div>
+  }
+
+  @if (!isLoading && !error) {
+    <p-accordion class="libros__accordion">
+      @for (book of books; track book.id) {
+        <p-accordion-panel [value]="book.id">
+          <p-accordion-header>{{ book.title }}</p-accordion-header>
+          <p-accordion-content>
+            <div class="book__detail">
+              <div class="book__detail--left">
+                @if (book.cover) {
+                  <img [src]="book.cover" [alt]="book.title" class="book__detail--img" />
+                }
+                <div class="book__detail--dedication">{{ book.dedication }}</div>
+              </div>
+              <div class="book__detail--right">
+                <div class="book__detail--block">
+                  <div class="book__detail--label">Sinópsis</div>
+                  <div class="book__detail--value">{{ book.summary }}</div>
+                </div>
+                <div class="book__detail--block">
+                  <div class="book__detail--label">Cantidad de páginas:</div>
+                  <div class="book__detail--value">{{ book.pages }}</div>
+                </div>
+                <div class="book__detail--block">
+                  <div class="book__detail--label">Cantidad de capítulos:</div>
+                  <div class="book__detail--value">{{ book.chapters }}</div>
+                </div>
+              </div>
+            </div>
+          </p-accordion-content>
+        </p-accordion-panel>
+      }
+    </p-accordion>
+  }
+</div>

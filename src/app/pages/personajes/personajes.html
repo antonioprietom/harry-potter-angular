@@ -1,0 +1,63 @@
+<div class="personajes__container">
+    <form class="filter__form" [formGroup]="filterForm" (ngSubmit)="onSearch()">
+        <div class="filter__row filter__row--top">
+            <input pInputText type="text" formControlName="name" placeholder="Nombre" class="filter__input filter__input--name" />
+        </div>
+        <div class="filter__row">
+            <input pInputText type="text" formControlName="nationality" placeholder="Origen" class="filter__input" />
+            <p-select formControlName="blood" [options]="bloodOptions" optionLabel="label" optionValue="value" placeholder="Tipo de sangre" [showClear]="true" class="filter__select" />
+            <p-select formControlName="house" [options]="houseOptions" optionLabel="label" optionValue="value" placeholder="Casa" [showClear]="true" class="filter__select" />
+        </div>
+        <div class="filter__row filter__row--actions">
+            <p-button type="submit" label="Buscar" [rounded]="true" severity="info" />
+            <p-button type="button" label="Limpiar" severity="secondary" (onClick)="onClear()" />
+        </div>
+    </form>
+
+    <p-table
+        #dt
+        [value]="characters"
+        [lazy]="true"
+        (onLazyLoad)="onPageChange($event)"
+        [totalRecords]="totalRecords"
+        [loading]="isLoading"
+        class="personajes__table"
+        [tableStyle]="{ 'min-width': '60rem' }"
+        [paginator]="true"
+        [rows]="100"
+        paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport"
+        currentPageReportTemplate="{first} - {last} de {totalRecords}">
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Origen</th>
+                <th>Sangre</th>
+                <th>Casa</th>
+                <th>Wiki</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-c>
+            <tr>
+                <td>{{ c.name }}</td>
+                <td><img [src]="c.image" [alt]="c.name" class="cell__img" /></td>
+                <td>{{ c.nationality }}</td>
+                <td>{{ c.blood }}</td>
+                <td>{{ c.house }}</td>
+                <td>
+                    @if (c.hasWiki) {
+                        <a [href]="c.wiki" target="_blank" rel="noopener" class="wiki__link">Ver Wiki</a>
+                    } @else {
+                        <span>No Information</span>
+                    }
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="6" class="empty__cell">Sin resultados</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

@@ -1,0 +1,95 @@
+@use '../../styles/variables' as *;
+
+
+.peliculas__container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #18181b;
+  color: #fff;
+  padding: 110px 24px 40px;
+}
+
+
+
+.peliculas__grid {
+  display: flex;
+  //border: 1px solid red;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  width: 180px;
+
+  &--poster {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: box-shadow 0.4s ease;
+  }
+
+  &--title {
+    font-family: 'Harry Potter', serif;
+    color: transparent;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    .movie__card--poster {
+      box-shadow: 2px 4px 32px 5px white;
+    }
+    .movie__card--title {
+      color: #d4af37;
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .peliculas__container {
+    padding: 90px 16px 30px;
+  }
+
+  .peliculas__grid {
+    gap: 20px;
+  }
+
+  .movie__card {
+    width: 140px;
+
+    &--title {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .peliculas__container {
+    padding: 80px 10px 20px;
+  }
+
+  .peliculas__grid {
+    gap: 16px;
+    justify-content: space-evenly;
+  }
+
+  .movie__card {
+    max-width: 160px;
+
+    &--title {
+      font-size: 14px;
+    }
+  }
+}
